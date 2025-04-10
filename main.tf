@@ -1,7 +1,4 @@
-     # Providers
-module "providers" {
-  source = "./providers"
-}
+
 
 # VPC Module
 module "vpc" {
