@@ -23,3 +23,13 @@ output "alb_dns_name" {
 module "ec2" {
   source = "./ec2"
 }
+
+output "ec2_instance_a_public_ip" {
+  description = "The public IP address of EC2 Instance A."
+  value       = module.ec2.instance_a_public_ip
+}
+
+output "ec2_instance_b_public_ip" {
+  description = "The public IP address of EC2 Instance B."
+  value       = module.ec2.instance_b_public_ip
+}
