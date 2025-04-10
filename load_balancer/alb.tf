@@ -9,3 +9,8 @@ resource "aws_lb" "example_alb" {
     Name = "example-alb"
   }
 }
+
+output "alb_dns_name" {
+  description = "The DNS name of the Application Load Balancer."
+  value       = aws_lb.example_alb.dns_name
+}
