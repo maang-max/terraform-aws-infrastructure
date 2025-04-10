@@ -25,50 +25,30 @@ Project Structure
 The Terraform configuration is organized into modular files for better readability and maintainability. Below is the directory structure:
 
 ├── main.tf          # Root module that calls other modules 
-
 ├── variables.tf     # Input variables for customization
-
 ├── outputs.tf       # Outputs such as ALB DNS name
-
 ├── providers.tf     # AWS provider configuration
-
 ├── vpc/             # VPC-related configurations
-
 │   ├── vpc.tf
-
 │   ├── subnets.tf
-
 │   ├── internet_gateway.tf
-
 │   └── route_tables.tf
-
 ├── security_groups/ # Security group configurations
-
 │   ├── alb_sg.tf
-
 │   └── instance_sg.tf
-
 ├── load_balancer/   # ALB and target group configurations
-
 │   ├── alb.tf
-
 │   ├── target_group.tf
-
 │   └── listener.tf
-
 ├── ec2/             # EC2 instances and auto-scaling configurations
-
 │   ├── instances.tf
-
 │   └── autoscaling.tf
-
 └── data.tf          # Data sources (if needed)
 
 Resources Deployed
 The following AWS resources are created by this Terraform configuration:
 
 # VPC
-
 A custom VPC with CIDR block 10.0.0.0/16.
 
 # Subnets
